@@ -34,7 +34,7 @@ requirements:
     - matplotlib-base
     - xlrd 
     - pyomo
-    - numpy
+    - numpy <=1.23
     - pandas
     - gpyopt
     - networkx
