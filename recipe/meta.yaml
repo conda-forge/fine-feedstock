@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1e8bff5de0770e1b4e6aba4f9502c107781bb4b9e1faff5d99db32f836cb0fc0
+  url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
+  sha256: 109fc148f12580a2cfbfed5059e57abf026fdca853f693dad2ae9b6f7d0d4c74
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps .
 
@@ -33,9 +33,9 @@ requirements:
     - openpyxl
     - matplotlib-base
     - xlrd 
-    - pyomo
-    - numpy
-    - pandas
+    - pyomo <6.4.2
+    - numpy <=1.21
+    - pandas <1.5
     - gpyopt
     - networkx
     - scipy
