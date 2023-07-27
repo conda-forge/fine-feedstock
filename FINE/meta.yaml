@@ -1,0 +1,58 @@
+{% set name = "FINE" %}
+{% set version = "2.2.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
+  sha256: 109fc148f12580a2cfbfed5059e57abf026fdca853f693dad2ae9b6f7d0d4c74
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+    - setuptools-git
+    - pip
+  run:
+    - python
+    - pandas >=0.19.2
+    - numpy >=1.11.3
+    - pyomo >=5.5.0
+    - tsam >=0.9.9
+    - sphinx_rtd_theme >=0.3.1
+    - matplotlib-base
+    - xlrd
+    - pwlf >=1.1.5
+    - gpyopt
+    - networkx >=2.4
+    - scipy >=1.4.1
+    - shapely
+    - openpyxl
+    - netcdf4
+    - xarray
+    - seaborn
+    - rasterio
+
+test:
+  imports:
+    - FINE
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/FZJ-IEK3-VSA/FINE
+  summary: Setuptools revision control system plugin for Git
+  license: MIT
+  license_file: LICENSE.txt
+
+extra:
+  recipe-maintainers:
+    - AddYourGitHubIdHere
