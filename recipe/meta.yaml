@@ -33,7 +33,7 @@ requirements:
     - openpyxl
     - matplotlib-base
     - xlrd 
-    - pyomo <6.5
+    - pyomo <6.4.2
     - numpy <=1.21
     - pandas <1.5
     - gpyopt
