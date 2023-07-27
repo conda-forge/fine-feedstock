@@ -35,7 +35,7 @@ requirements:
     - xlrd 
     - pyomo
     - numpy <=1.23
-    - pandas <= 1.52
+    - pandas <=1.52
     - gpyopt
     - networkx
     - scipy
