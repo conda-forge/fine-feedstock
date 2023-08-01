@@ -1,11 +1,11 @@
-About fine
-==========
+About fine-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fine-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/FZJ-IEK3-VSA/FINE.git
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fine-feedstock/blob/main/LICENSE.txt)
 
 Summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems.
 
@@ -144,4 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@julian-belina](https://github.com/julian-belina/)
+* [@noah80](https://github.com/noah80/)
+* [@t-gross](https://github.com/t-gross/)
 
