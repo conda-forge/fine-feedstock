@@ -1,4 +1,4 @@
-{% set version = "2.2.2" %}
+{% set version = "2.2.3" %}
 
 package:
   name: fine
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
-  sha256: 109fc148f12580a2cfbfed5059e57abf026fdca853f693dad2ae9b6f7d0d4c74
+  sha256: 38a7be8dd48d0addf65b1caee245c2a780d140bed4fafa4f253b802c1839346d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps .
 
@@ -22,7 +22,7 @@ requirements:
   run:
     - python  >=3.6
     - libiconv
-    - gdal 
+    - gdal
     - geopandas
     - jupyter
     - notebook
@@ -32,7 +32,7 @@ requirements:
     - glpk
     - openpyxl
     - matplotlib-base
-    - xlrd 
+    - xlrd
     - pyomo <6.4.2
     - numpy <=1.21
     - pandas <1.5
@@ -52,7 +52,7 @@ requirements:
     - pytest-cov
     - pylint
     - nbval
-    - black  
+    - black
     - tsam
     - wquantiles
     - glpk
@@ -71,7 +71,7 @@ test:
 
 about:
   home: https://github.com/FZJ-IEK3-VSA/FINE.git
-  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems. 
+  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems.
   license: MIT
   license_file: LICENSE.txt
 
