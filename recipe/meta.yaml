@@ -1,4 +1,4 @@
-{% set version = "2.2.3" %}
+{% set version = "2.3.0" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
-  sha256: 38a7be8dd48d0addf65b1caee245c2a780d140bed4fafa4f253b802c1839346d
+  sha256: 31f356fbaad77790a3ef2ecbc92e5e3c526a9bba3f533ee524ab3bef0a66dee7
 
 build:
   number: 0
@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10
     - pip
     - setuptools-git
   run:
-    - python  >=3.6
+    - python  >=3.10
     - libiconv
-    - gdal
+    - gdal =3.4
     - geopandas
     - jupyter
     - notebook
@@ -31,31 +31,18 @@ requirements:
     - descartes
     - glpk
     - openpyxl
-    - matplotlib-base
+    - matplotlib
     - xlrd
-    - pyomo <6.4.2
-    - numpy <=1.23
-    - pandas <1.5
-    - gpyopt
+    - pyomo 
+    - numpy 
+    - pandas >=2
     - networkx
     - scipy
-    - pwlf
-    - pydoe
-    - sphinx_rtd_theme
     - scikit-learn
     - xarray
-    - statsmodels
-    - seaborn
     - rasterio
     - netcdf4
-    - pytest
-    - pytest-cov
-    - pylint
-    - nbval
-    - black
-    - tsam
-    - wquantiles
-    - glpk
+    - tsam   
 
 test:
   imports:
