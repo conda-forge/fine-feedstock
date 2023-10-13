@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10
     - pip
     - setuptools-git
   run:
-    - python  >=3.6
+    - python  >=3.10
     - libiconv
-    - gdal
+    - gdal =3.4
     - geopandas
     - jupyter
     - notebook
@@ -31,31 +31,18 @@ requirements:
     - descartes
     - glpk
     - openpyxl
-    - matplotlib-base
+    - matplotlib
     - xlrd
-    - pyomo <6.4.2
-    - numpy <=1.23
-    - pandas <1.5
-    - gpyopt
+    - pyomo 
+    - numpy 
+    - pandas >=2
     - networkx
     - scipy
-    - pwlf
-    - pydoe
-    - sphinx_rtd_theme
     - scikit-learn
     - xarray
-    - statsmodels
-    - seaborn
     - rasterio
     - netcdf4
-    - pytest
-    - pytest-cov
-    - pylint
-    - nbval
-    - black
-    - tsam
-    - wquantiles
-    - glpk
+    - tsam   
 
 test:
   imports:
