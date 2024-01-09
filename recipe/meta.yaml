@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.2" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
-  sha256: 31f356fbaad77790a3ef2ecbc92e5e3c526a9bba3f533ee524ab3bef0a66dee7
+  sha256: e13d5b8a72fb166f5a5ce22a9feac06a234241d6d2b61719207cc3f9677a83a2
 
 build:
   number: 0
@@ -33,8 +33,8 @@ requirements:
     - openpyxl
     - matplotlib
     - xlrd
-    - pyomo 
-    - numpy 
+    - pyomo
+    - numpy
     - pandas >=2
     - networkx
     - scipy
@@ -42,7 +42,7 @@ requirements:
     - xarray
     - rasterio
     - netcdf4
-    - tsam   
+    - tsam
 
 test:
   imports:
