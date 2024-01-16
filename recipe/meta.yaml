@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 package:
   name: fine
@@ -6,23 +6,22 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6191240ad67c4bb5f25698cbd3ad4a29a71892b6e8dde045215af2c02e241f82
+  sha256: e13d5b8a72fb166f5a5ce22a9feac06a234241d6d2b61719207cc3f9677a83a2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps .
 
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10
     - pip
-    - setuptools-git
   run:
-    - python  >=3.6
+    - python >=3.10
     - libiconv
-    - gdal 
+    - gdal =3.4.3
     - geopandas
     - jupyter
     - notebook
@@ -31,36 +30,32 @@ requirements:
     - descartes
     - glpk
     - openpyxl
-    - matplotlib-base
-    - xlrd 
-    - pyomo <6.4.2
-    - numpy <=1.21
-    - pandas <1.5
-    - gpyopt
+    - matplotlib
+    - xlrd
+    - pyomo
+    - numpy
+    - pandas
     - networkx
     - scipy
-    - pwlf
-    - pydoe
-    - sphinx_rtd_theme
     - scikit-learn
-    - xarray <2023.10.0
-    - statsmodels
-    - seaborn
+    - xarray
     - rasterio
     - netcdf4
+    - tsam
+    - sphinx
+    - sphinx_rtd_theme
+    - myst-parser
     - pytest
     - pytest-cov
-    - pylint
     - nbval
-    - black  
-    - tsam
-    - wquantiles
-    - glpk
-    - grblogtools
+    - black
+    - pwlf
+    - psutil
+    - gurobi-logtools
 
 test:
   imports:
-    - FINE
+    - fine
     - pandas
     - numpy
   source_files:
@@ -72,7 +67,7 @@ test:
 
 about:
   home: https://github.com/FZJ-IEK3-VSA/FINE.git
-  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems. 
+  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems.
   license: MIT
   license_file: LICENSE.txt
 
