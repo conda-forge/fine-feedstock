@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6191240ad67c4bb5f25698cbd3ad4a29a71892b6e8dde045215af2c02e241f82
+  sha256: e13d5b8a72fb166f5a5ce22a9feac06a234241d6d2b61719207cc3f9677a83a2
 
 build:
   number: 1
@@ -56,7 +56,7 @@ requirements:
     - tsam
     - wquantiles
     - glpk
-    - grblogtools
+    - gurobi-logtools
 
 test:
   imports:
