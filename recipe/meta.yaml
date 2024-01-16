@@ -9,7 +9,7 @@ source:
   sha256: e13d5b8a72fb166f5a5ce22a9feac06a234241d6d2b61719207cc3f9677a83a2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps .
 
@@ -60,7 +60,7 @@ requirements:
 
 test:
   imports:
-    - FINE
+    - fine
     - pandas
     - numpy
   source_files:
