@@ -43,7 +43,7 @@ requirements:
     - pydoe
     - sphinx_rtd_theme
     - scikit-learn
-    - xarray <2023.10.0-pyhd8ed1ab_0  
+    - xarray <2023.10.0
     - statsmodels
     - seaborn
     - rasterio
