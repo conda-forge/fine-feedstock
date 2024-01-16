@@ -6,7 +6,8 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6191240ad67c4bb5f25698cbd3ad4a29a71892b6e8dde045215af2c02e241f82
+  sha256: 6191240AD67C4BB5F25698CBD3AD4A29A71892B6E8DDE045215AF2C02E241F82
+
 
 build:
   number: 1
