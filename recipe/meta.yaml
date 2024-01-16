@@ -56,7 +56,7 @@ requirements:
     - tsam
     - wquantiles
     - glpk
-    - gurobi-logtools
+    - grblogtools
 
 test:
   imports:
