@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.6
     - pip
   run:
-    - python>=3.10
+    - python >=3.10
     - libiconv
-    - gdal=3.4.3
+    - gdal =3.4.3
     - geopandas
     - jupyter
     - notebook
@@ -67,7 +67,7 @@ test:
 
 about:
   home: https://github.com/FZJ-IEK3-VSA/FINE.git
-  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems. 
+  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems.
   license: MIT
   license_file: LICENSE.txt
 
