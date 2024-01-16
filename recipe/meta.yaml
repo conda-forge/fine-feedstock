@@ -1,28 +1,28 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: fine
   version: {{ version }}
 
 source:
-  url: https://github.com/FZJ-IEK3-VSA/FINE/archive/v{{ version }}.tar.gz
-  sha256: 31f356fbaad77790a3ef2ecbc92e5e3c526a9bba3f533ee524ab3bef0a66dee7
+  url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 6191240ad67c4bb5f25698cbd3ad4a29a71892b6e8dde045215af2c02e241f82
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps .
 
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.6
     - pip
     - setuptools-git
   run:
-    - python  >=3.10
+    - python  >=3.6
     - libiconv
-    - gdal =3.4
+    - gdal 
     - geopandas
     - jupyter
     - notebook
@@ -31,18 +31,32 @@ requirements:
     - descartes
     - glpk
     - openpyxl
-    - matplotlib
-    - xlrd
-    - pyomo 
-    - numpy 
-    - pandas >=2
+    - matplotlib-base
+    - xlrd 
+    - pyomo <6.4.2
+    - numpy <=1.21
+    - pandas <1.5
+    - gpyopt
     - networkx
     - scipy
+    - pwlf
+    - pydoe
+    - sphinx_rtd_theme
     - scikit-learn
-    - xarray
+    - xarray <2023.10.0
+    - statsmodels
+    - seaborn
     - rasterio
     - netcdf4
-    - tsam   
+    - pytest
+    - pytest-cov
+    - pylint
+    - nbval
+    - black  
+    - tsam
+    - wquantiles
+    - glpk
+    - grblogtools
 
 test:
   imports:
@@ -58,7 +72,7 @@ test:
 
 about:
   home: https://github.com/FZJ-IEK3-VSA/FINE.git
-  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems.
+  summary: The FINE python package provides a framework for modeling, optimizing and assessing energy systems. 
   license: MIT
   license_file: LICENSE.txt
 
