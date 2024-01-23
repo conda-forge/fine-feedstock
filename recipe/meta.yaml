@@ -1,4 +1,4 @@
-{% set version = "2.3.2" %}
+{% set version = "2.3.3" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e13d5b8a72fb166f5a5ce22a9feac06a234241d6d2b61719207cc3f9677a83a2
+  sha256: 9cf0f71d7a86ed0e08d417e97796ff22de43c60ce19dbaafa9b6b6169427fc40
 
 build:
   number: 0
