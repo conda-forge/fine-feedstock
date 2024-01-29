@@ -37,7 +37,7 @@ requirements:
     - pandas
     - networkx
     - scipy
-    - scikit-learn
+    - scikit-learn >=1.2
     - xarray
     - rasterio
     - netcdf4
