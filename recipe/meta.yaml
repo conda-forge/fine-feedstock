@@ -45,7 +45,7 @@ requirements:
     - sphinx
     - sphinx_rtd_theme
     - myst-parser
-    - pytest
+    - pytest <7.0
     - pytest-cov
     - nbval
     - black
