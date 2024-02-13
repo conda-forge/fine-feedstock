@@ -1,4 +1,4 @@
-{% set version = "2.3.3" %}
+{% set version = "2.3.4" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 9cf0f71d7a86ed0e08d417e97796ff22de43c60ce19dbaafa9b6b6169427fc40
+  sha256: becdf4a7f2958bea0cdd9694ce5620772a9edc94dbe6b4b92c46c3acffd5b057
 
 build:
   number: 0
@@ -19,9 +19,8 @@ requirements:
     - python >=3.10
     - pip
   run:
-    - python >=3.10
+    - python =3.10
     - libiconv
-    - gdal =3.4.3
     - geopandas
     - jupyter
     - notebook
@@ -42,16 +41,17 @@ requirements:
     - rasterio
     - netcdf4
     - tsam
-    - sphinx
-    - sphinx_rtd_theme
-    - myst-parser
-    - pytest <7.0
-    - pytest-cov
-    - nbval
-    - black
     - pwlf
     - psutil
     - gurobi-logtools
+    - sphinx
+    - sphinx_rtd_theme
+    - myst-parser
+    - pytest
+    - pytest-cov
+    - nbval
+    - black
+    - pytest-xdist
 
 test:
   imports:
