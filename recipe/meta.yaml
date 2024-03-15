@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.5" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: becdf4a7f2958bea0cdd9694ce5620772a9edc94dbe6b4b92c46c3acffd5b057
+  sha256: ba6907c2c630aad8d032cdcc6210514ac6973d4274e72074cc64966487297d73
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python =3.10
     - pip
   run:
     - python =3.10
@@ -44,14 +44,6 @@ requirements:
     - pwlf
     - psutil
     - gurobi-logtools
-    - sphinx
-    - sphinx_rtd_theme
-    - myst-parser
-    - pytest
-    - pytest-cov
-    - nbval
-    - black
-    - pytest-xdist
 
 test:
   imports:
