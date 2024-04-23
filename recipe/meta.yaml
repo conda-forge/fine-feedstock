@@ -1,4 +1,4 @@
-{% set version = "2.3.5" %}
+{% set version = "2.3.7" %}
 
 package:
   name: fine
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ba6907c2c630aad8d032cdcc6210514ac6973d4274e72074cc64966487297d73
+  sha256: a8c0582fa72e48272efbd4b92bf51f60e7affbf011083ca559aa1e941191612e
 
 build:
   number: 0
@@ -16,34 +16,28 @@ build:
 
 requirements:
   host:
-    - python =3.10
+    - python >=3.10,<3.13
     - pip
   run:
-    - python =3.10
-    - libiconv
-    - geopandas
-    - jupyter
-    - notebook
-    - libpysal
+    - python >=3.10,<3.13
     - pip
-    - descartes
+    - geopandas <1
     - glpk
-    - openpyxl
-    - matplotlib
-    - xlrd
-    - pyomo
-    - numpy
-    - pandas
-    - networkx
-    - scipy
-    - scikit-learn >=1.2
-    - xarray
-    - rasterio
-    - netcdf4
+    - openpyxl <4
+    - matplotlib <4
+    - xlrd <3
+    - pyomo <7
+    - numpy <2
+    - pandas <3
+    - scipy <2
+    - scikit-learn >=1.2,<2
+    - xarray <=2024.3
+    - rasterio <2
+    - netcdf4 <2
     - tsam
-    - pwlf
-    - psutil
-    - gurobi-logtools
+    - pwlf <3
+    - psutil <6
+    - gurobi-logtools <4
 
 test:
   imports:
@@ -68,3 +62,4 @@ extra:
     - noah80
     - t-gross
     - julian-belina
+    - k-knosala

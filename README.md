@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@julian-belina](https://github.com/julian-belina/)
+* [@k-knosala](https://github.com/k-knosala/)
 * [@noah80](https://github.com/noah80/)
 * [@t-gross](https://github.com/t-gross/)
 
