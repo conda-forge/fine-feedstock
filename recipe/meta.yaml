@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.10,<3.13
     - pip
+    - setuptools
   run:
     - python >=3.10,<3.13
     - pip
@@ -59,7 +60,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - m.gnirss
     - noah80
     - t-gross
     - julian-belina
