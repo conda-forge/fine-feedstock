@@ -9,15 +9,16 @@ source:
   sha256: 92d09eedc29074acda3607abc7cc32f496559270c824bbe948bc76f78314d21d
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install --no-deps .
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 
 requirements:
   host:
     - python >=3.10,<3.13
     - pip
+    - setuptools >=61.0.0
   run:
     - python >=3.10,<3.13
     - pip
@@ -26,7 +27,7 @@ requirements:
     - openpyxl <4
     - matplotlib <4
     - xlrd <3
-    - pyomo <7
+    - pyomo <=6.7.3
     - numpy <2
     - pandas <3
     - scipy <2
