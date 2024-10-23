@@ -27,7 +27,7 @@ requirements:
     - openpyxl <4
     - matplotlib <4
     - xlrd <3
-    - pyomo <6.8.0
+    - pyomo <=6.7.3
     - numpy <2
     - pandas <3
     - scipy <2
