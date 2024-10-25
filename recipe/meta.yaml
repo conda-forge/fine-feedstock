@@ -39,7 +39,7 @@ requirements:
     - pwlf <=2.2.1
     - psutil <=5.9.8
     - gurobi-logtools <=3.1.0
-    - ipykernel<=6.29.5
+    - ipykernel <=6.29.5
 
 test:
   imports:
