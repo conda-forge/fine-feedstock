@@ -1,5 +1,6 @@
-{% set version = "2.4.0" %}
 {% set python_min = "3.10" %}
+{% set version = "2.4.0" %}
+
 
 package:
   name: fine
