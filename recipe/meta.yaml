@@ -1,4 +1,6 @@
+{% set python_min = "3.10" %}
 {% set version = "2.4.0" %}
+
 
 package:
   name: fine
@@ -9,18 +11,18 @@ source:
   sha256: df17ef91d5f2fb35f5fc110e5d96566b3be57518ba7d3152cbad395df7372621
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 
 requirements:
   host:
-    - python >=3.10,<3.13
+    - python {{ python_min }}
     - pip
     - setuptools >=61.0.0
   run:
-    - python >=3.10,<3.13
+    - python >={{ python_min }},<3.13
     - pip
     - geopandas <=0.14.4
     - glpk
@@ -49,6 +51,7 @@ test:
   source_files:
     - .
   requires:
+    - python {{ python_min }}
     - pytest
   commands:
     - pytest test/
@@ -64,4 +67,3 @@ extra:
     - noah80
     - t-gross
     - julian-belina
-    - k-knosala
