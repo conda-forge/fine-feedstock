@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set python_max = "3.13" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 3e620565d855766345d92628282fb55f2c8ee1478b9077de3ccb548cc0ab7190
+  sha256: e3d2c03c1fb0e50a34e36d44f63147009e215e97b201563ce6bef840acae2b3f
 
 build:
   number: 0
