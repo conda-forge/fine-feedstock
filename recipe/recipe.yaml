@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 109fc148f12580a2cfbfed5059e57abf026fdca853f693dad2ae9b6f7d0d4c74
+  sha256: e3d2c03c1fb0e50a34e36d44f63147009e215e97b201563ce6bef840acae2b3f
 
 build:
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation
