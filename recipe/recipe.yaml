@@ -22,6 +22,7 @@ requirements:
   - hatchling
   - pip
   run:
+  - python >=${{ python_min }},<=${{ python_max }}
   - pip
   - geopandas >=1.0.0,<=1.1.2
   - glpk >=4.63,<=5.0
