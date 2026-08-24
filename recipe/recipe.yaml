@@ -1,7 +1,7 @@
 context:
-  version: "2.6.0"
+  version: "2.7.1"
   python_min: "3.10"
-  python_max: "3.13.12"
+  python_max: "3.14.3"
 
 package:
   name: fine
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/FINE/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: e3d2c03c1fb0e50a34e36d44f63147009e215e97b201563ce6bef840acae2b3f
+  sha256: ace45eca13912b5e1c9beba960e9b0ff4b0ffef1452c555c95fef1ddd532af1f
 
 build:
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation
@@ -18,40 +18,41 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - hatchling
-  - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
   run:
-  - python >=${{ python_min }},<=${{ python_max }}
-  - pip
-  - geopandas >=1.0.0,<=1.1.2
-  - glpk >=4.63,<=5.0
-  - openpyxl <=3.1.5
-  - matplotlib <=3.10.8
-  - xlrd >=1.2.0,<=2.0.2
-  - pyomo >=6.8,<=6.10.0
-  - numpy >=1.22,<=2.4.2
-  - pandas >=1.4,<=2.3.3
-  - scipy >=1.7.2,<=1.17.1
-  - scikit-learn >=1.2,<=1.8.0
-  - xarray >=2022.3.0,<=2026.2.0,!=2024.10.0,!=2024.11.0,!=2025.1.*,!=2025.3.*,!=2025.9.*
-  - rasterio >=1.3.7,<=1.5.0
-  - netcdf4 >1.6.4,<=1.7.4
-  - tsam >=2.0.1,<=2.3.9
-  - pwlf >=2.0.4,<=2.5.2
-  - psutil >=5.8.0,<=7.2.2
-  - gurobi-logtools >=3.0.0,<=3.2.0
-  - ipykernel <=7.2.0
+    - python >=${{ python_min }},<=${{ python_max }}
+    - pip
+    - geopandas >=1.0.0,<=1.1.4
+    - glpk >=4.63,<=5.0
+    - openpyxl <=3.1.5
+    - matplotlib <=3.11.1
+    - xlrd >=1.2.0,<=2.0.2
+    - pyomo >=6.8.1,<=6.10.1
+    - numpy >=1.22,<=2.4.6
+    - pandas >=2.2.0,<3.0.0
+    - scipy >=1.7.2,<=1.17.1
+    - scikit-learn >=1.3.0,<=1.9.0
+    - xarray >=2023.4.1,<=2026.7.0,!=2024.10.0,!=2024.11.0,!=2025.1,!=2025.3,!=2025.9
+    - rasterio >=1.3.7,<=1.5.0
+    - netcdf4 >1.6.4,<=1.7.4
+    - tsam >=3.4.2,<=3.4.2
+    - pwlf >=2.5.0,<=2.6.0
+    - psutil >=5.8.0,<=7.2.2
+    - gurobi-logtools >=3.2.0,<=4.0.1
+    - highspy >=1.13.1, <=1.14.0
+    - ipykernel <=7.2.0
 
 tests:
-- script:
-    - pytest -n auto -vvv
-  requirements:
+  - script:
+      - pytest -n auto -vvv
+    requirements:
       run:
         - pytest
         - pytest-xdist
         - python ${{ python_min }}.*
-  files:
+    files:
       source:
         - .
 about:
@@ -62,6 +63,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - phil-fzj 
+    - phil-fzj
     - JohannesBehrens
     - julian-belina

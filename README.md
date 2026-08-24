@@ -190,4 +190,5 @@ Feedstock Maintainers
 
 * [@JohannesBehrens](https://github.com/JohannesBehrens/)
 * [@julian-belina](https://github.com/julian-belina/)
+* [@phil-fzj](https://github.com/phil-fzj/)
 
